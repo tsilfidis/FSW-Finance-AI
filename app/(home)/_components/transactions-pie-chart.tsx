@@ -80,17 +80,17 @@ const TransactionsPieChart = ({ depositsTotal, investmentsTotal, expensesTotal, 
                     <PercentageItem
                         icon={<TrendingUpIcon size={16} className="text-primary" />}
                         title="Receita"
-                        value={`${typesPercentage[TransactionType.DEPOSIT]}%`}
+                        value={typesPercentage[TransactionType.DEPOSIT]}
                     />
                     <PercentageItem
                         icon={<TrendingDownIcon size={16} className="text-red-500" />}
                         title="Despesas"
-                        value={`${typesPercentage[TransactionType.EXPENSE]}%`}
+                        value={typesPercentage[TransactionType.EXPENSE]}
                     />
                     <PercentageItem
                         icon={<PiggyBankIcon size={16} />}
                         title="Investido"
-                        value={`${typesPercentage[TransactionType.INVESTMENT]}%`}
+                        value={typesPercentage[TransactionType.INVESTMENT]}
                     />
                 </div>
             </CardContent>
