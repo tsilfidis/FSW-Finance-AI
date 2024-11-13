@@ -27,15 +27,15 @@ const SummaryCards = async ({
                 title="Saldo"
                 amount={balance}
                 size="large"
-                userCanAddTransaction={userCanAddTransaction}
+                userCanAddTransaction={JSON.parse(JSON.stringify(userCanAddTransaction))}
             />
 
             {/* OUTROS CARDS */}
 
             <div className="grid grid-cols-3 gap-6">
-                <SummaryCard icon={<PiggyBankIcon size={18} />} title="Investido" amount={investmentsTotal} />
-                <SummaryCard icon={<TrendingUpIcon size={18} className="text-primary" />} title="Receitas" amount={depositsTotal} />
-                <SummaryCard icon={<TrendingDownIcon size={18} className="text-red-500" />} title="Despesas" amount={expensesTotal} />
+                <SummaryCard icon={<PiggyBankIcon size={18} />} title="Investido" amount={JSON.parse(JSON.stringify(investmentsTotal))} />
+                <SummaryCard icon={<TrendingUpIcon size={18} className="text-primary" />} title="Receitas" amount={JSON.parse(JSON.stringify(depositsTotal))} />
+                <SummaryCard icon={<TrendingDownIcon size={18} className="text-red-500" />} title="Despesas" amount={JSON.parse(JSON.stringify(expensesTotal))} />
             </div>
         </div>
     );

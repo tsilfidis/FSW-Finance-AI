@@ -26,10 +26,10 @@ const TransactionsPage = async () => {
         {/* TÍTULO E BOTÃO */}
         <div className="flex w-full items-center justify-between">
           <h1 className="text-2xl font-bold">Transações</h1>
-          <AddTransactionButton userCanAddTransaction={userCanAddTransaction} />
+          <AddTransactionButton userCanAddTransaction={JSON.parse(JSON.stringify(userCanAddTransaction))} />
         </div>
         <ScrollArea>
-          <DataTable columns={transactionColumns} data={transactions} />
+          <DataTable columns={transactionColumns} data={JSON.parse(JSON.stringify(transactions))} />
         </ScrollArea>
       </div>
     </>
